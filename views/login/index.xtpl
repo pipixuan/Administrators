@@ -1,0 +1,35 @@
+{{extend ('../layout/plain')}}
+
+{{#block ('plain')}}
+	<!-- 登录 -->
+	<div class="login">
+		<div class="login-wrap">
+			<div class="avatar">
+				<img src="/monkey.png" class="img-circle" alt="">
+			</div>
+			<form id="login" class="col-md-offset-1 col-md-10">
+				<div class="input-group input-group-lg">
+					<span class="input-group-addon">
+						<i class="fa fa-user"></i>
+					</span>
+					<input type="text" name="tc_name" class="form-control" placeholder="用户名">
+				</div>
+				<div class="input-group input-group-lg">
+					<span class="input-group-addon">
+						<i class="fa fa-key"></i>
+					</span>
+					<input type="password" name="tc_pass" class="form-control" placeholder="密码">
+				</div>
+				<button type="submit" class="btn btn-lg btn-primary btn-block">登 录</button>
+			</form>
+		</div>
+	</div>
+{{/block}}
+
+{{#block ('script')}}
+
+	<script>
+		seajs.use('/scripts/login/index');
+	</script>
+
+{{/block}}

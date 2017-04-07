@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学IT - 后台管理系统</title>
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/assets/nprogress/nprogress.css">
+	{{{block ('style')}}}
+	<link rel="stylesheet" href="/less/index.css">
+</head>
+<body>
+	
+	{{{block ('aside')}}}
+
+	{{{block ('main')}}}
+
+	{{{block ('plain')}}}
+
+	{{{block ('template')}}}
+
+	{{{block ('tpl')}}}
+
+	<script src="/libs/sea.js"></script>
+	<script src="/libs/seajs-preload.js"></script>
+	<script src="/libs/seajs-config.js"></script>
+	{{{block ('script')}}}
+</body>
+</html>

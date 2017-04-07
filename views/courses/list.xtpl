@@ -1,0 +1,78 @@
+{{extend ('../layout/main')}}
+
+{{#block ('content')}}
+	<!-- 客户列表 -->
+	<div class="body course-list">
+		<!-- 面包屑 -->
+		<ol class="breadcrumb">
+			<li><a href="javascript:;">课程管理</a></li>
+			<li class="active">课程列表</li>
+		</ol>
+		<div class="courses">
+			<!-- 搜索 -->
+			<div class="search">
+				<form action="" class="form-inline">
+					<select name="" class="form-control input-sm">
+						<option value="">按年龄</option>
+					</select>
+					<select name="" class="form-control input-sm">
+						<option value="">按性别</option>
+					</select>
+					<select name="" class="form-control input-sm">
+						<option value="">按地区</option>
+					</select>
+					<select name="" class="form-control input-sm">
+						<option value="">按日期</option>
+					</select>
+					<button class="btn btn-success btn-sm">筛选</button>
+					<div class="input-group pull-right">
+						<input type="text" class="form-control input-sm">
+						<span class="input-group-btn">
+							<button class="btn btn-success btn-sm">搜索</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			{{#each (courses)}}
+			<div class="course">
+				<div class="pic">
+					<img src="/thumbs/{{this.cs_cover}}" alt="">
+				</div>
+				<div class="info">
+					<a href="/course/basic/{{this.cs_id}}">{{this.cs_name}}</a>
+					<ul class="list-unstyled">
+						<li>
+							<span>讲师：李鹏周</span>
+							<span>类别：前端开发</span>
+						</li>
+						<li>
+							<span>课时：32</span>
+							<span>学员：9823</span>
+						</li>
+						<li>
+							<span>浏览：11313</span>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+		<!-- 分页 -->
+		<ul class="pagination pull-right">
+			<li><a href="#">上一页</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">下一页</a></li>
+		</ul>
+	</div>
+{{/block}}
+
+{{#block ('script')}}
+	<script>
+		seajs.use();
+	</script>
+{{/block}}
